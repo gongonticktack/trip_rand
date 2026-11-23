@@ -1,0 +1,12 @@
+﻿CREATE TABLE IF NOT EXISTS accounts (
+ id TEXT PRIMARY KEY, username TEXT NOT NULL UNIQUE COLLATE NOCASE,
+ password_hash TEXT NOT NULL, salt TEXT NOT NULL, data_token TEXT NOT NULL,
+ created_at INTEGER NOT NULL
+);
+CREATE TABLE IF NOT EXISTS sessions (
+ token_hash TEXT PRIMARY KEY, account_id TEXT NOT NULL REFERENCES accounts(id),
+ ip_hash TEXT NOT NULL, expires_at INTEGER NOT NULL
+);
+CREATE TABLE IF NOT EXISTS login_limits (
+ ip_hash TEXT PRIMARY KEY, failures INTEGER NOT NULL, window_start INTEGER NOT NULL
+);

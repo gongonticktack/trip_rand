@@ -1,0 +1,6 @@
+BEGIN;
+ALTER TABLE public.trip_rand_spots
+  ADD COLUMN IF NOT EXISTS parking_free BOOLEAN,
+  ADD COLUMN IF NOT EXISTS scenic_road BOOLEAN NOT NULL DEFAULT false,
+  ADD COLUMN IF NOT EXISTS drive_highlight TEXT;
+COMMIT;

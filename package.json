@@ -1,0 +1,23 @@
+{
+  "name": "trip-rand",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "start": "node scripts/server.mjs",
+    "build": "node scripts/build.mjs",
+    "seed:sql": "node scripts/seed.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "deploy": "npx wrangler pages deploy dist --project-name trip-rand"
+  },
+  "dependencies": {
+    "leaflet": "1.9.4"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2",
+    "wrangler": "4.149.0"
+  }
+}
