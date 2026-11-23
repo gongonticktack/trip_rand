@@ -2,7 +2,7 @@
 
 全国のドライブ先を地図で探し、訪問日・写真をユーザーIDごとに保存するアプリです。
 
-**公開URL: https://trip-rand.pages.dev/**
+**公開URL: https://trip-rand.gongonticktack.workers.dev/**
 
 79件のスポット、ユーザー情報、訪問記録、写真は、job_postと同じSupabaseプロジェクト `ngsfugndmboqquyksnwr` の専用テーブルに保存します。ユーザー切り替えはIDだけです。パスワード・メール認証・Supabase Auth・D1は使いません。
 
